@@ -1,105 +1,104 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 body {
-    background-color: #232323;
-    font-family: 'Poppins', sans-serif;
-    color: aliceblue;
-    flex-direction: column;
+  background-color: #232323;
+  font-family: "Poppins", sans-serif;
+  color: aliceblue;
+  flex-direction: column;
 }
 
 header {
-    background-color: #171717;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    margin-bottom: 20px;
+  background-color: #171717;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  margin-bottom: 20px;
 }
 
 .pHeader {
-    margin: 20px;
+  margin: 20px;
 }
 
 .logo {
-    width: 12%;
+  width: 12%;
 }
 
 .Container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 h1 {
-    text-align: center;
-    font-size: 2.5em;
-    margin-top: 40px;
+  text-align: center;
+  font-size: 2.5em;
+  margin-top: 40px;
 }
 
 h2 {
-    text-align: center;
-    font-size: 1.1em;
-    font-weight: 400;
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: 400;
 }
 
 button {
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    border: 3px solid #009BA5;
-    border-radius: 5px;
-    box-sizing: border-box;
-    background: none;
-    color: #009BA5;
-    font-family: 'Poppins';
-    font-size: 1.1em;
-    text-align: center;
-    width: 30%;
-    height: 50px;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border: 3px solid #009ba5;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background: none;
+  color: #009ba5;
+  font-family: "Poppins";
+  font-size: 1.1em;
+  text-align: center;
+  width: 30%;
+  height: 50px;
+  cursor: pointer;
 }
 
 button:hover {
-    width: 32%;
-    height: 50px;
-    transition: 0.5s;
-    font-size: 1.2em;
+  width: 32%;
+  height: 50px;
+  transition: 0.5s;
+  font-size: 1.2em;
 }
 
 .p {
-    text-align: center;
-    color: #898989;
-    font-size: 10pt;
+  text-align: center;
+  color: #898989;
+  font-size: 10pt;
 }
 
 .icon {
-    width: 7%;
-    margin: 20px;
+  width: 7%;
+  margin: 20px;
 }
 
 .footer {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12pt;
-    text-align: center;
-    margin-top: 7%;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12pt;
+  text-align: center;
+  margin-top: 7%;
 }
 
 .input {
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    cursor: pointer;
-    font-family: 'Poppins';
-    font-size: 12pt;
-    margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  cursor: pointer;
+  font-family: "Poppins";
+  font-size: 12pt;
+  margin-top: 30px;
 }
