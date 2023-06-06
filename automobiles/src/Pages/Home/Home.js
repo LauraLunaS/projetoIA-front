@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React from "react";
 import { useState } from "react";
 import logo from "../../images/logo.png"
@@ -11,14 +12,31 @@ import styles from "./style.module.css"
 
  function Home() {
 
-    
-    const [image, setImage] = useState('');
-    const uploadImage = async e => {
+    const [selectedFile, setSelectedFile] = useState(null);
+    const [prediction, setPrediction] = useState(null);
 
-        e.preventDefault()
-        console.log("Upload Imagem")
-        
-    }
+        const handleFileChange = (event) => {
+            setSelectedFile(event.target.files[0]);
+        };
+
+        const handlePredict = () => {
+            if (!selectedFile) {
+            alert('Selecione um arquivo de imagem');
+            return;
+            }
+
+
+        const formData = new FormData(); {
+        formData.append('image', selectedFile);
+    
+        axios.post('http://localhost:5000/predict', formData)
+          .then(response => {
+            setPrediction(response.data);
+          })
+          .catch(error => {
+            console.error(error);
+          });
+        }
 
 
     return (
@@ -31,12 +49,20 @@ import styles from "./style.module.css"
             <div clasName={styles.Container}>
                 <h1>Publique sua imagem aqui</h1>
                 <h2>Obtenha a classificação das suas imagens de automóveis</h2>
-                <form onSubmit={uploadImage}>
-                <input type="file" name="image" multiple onChange={e => setImage(e.target.files[0])} className={styles.input}/>
                 
-                <button type="submit">Salvar</button>
-                </form>
+                <input type="file" name="image" multiple onChange={handleFileChange} className={styles.input}/>
+                
+                <button type="submit" onClick={handlePredict}>Salvar</button>
                 <p className={styles.p}>Click to choose, copy & paste or drag drop files anywhere</p>
+
+                {prediction && (
+                    <div>
+                    <p>Class ID: {prediction.class_id}</p>
+                    <p>Class Name: {prediction.class_name}</p>
+                    </div>
+                )}         
+                
+               
             </div>
 
             <footer className={styles.footer}>
@@ -48,6 +74,7 @@ import styles from "./style.module.css"
         </div>
     )
 
+}
 }
 
 export default Home;
