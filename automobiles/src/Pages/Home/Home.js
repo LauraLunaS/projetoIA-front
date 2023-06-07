@@ -59,20 +59,28 @@ function Home() {
           Click to choose, copy & paste or drag drop files anywhere
         </p>
 
-        {prediction && (
-          <div>
-            <p>Class ID: {prediction.class_id}</p>
-            <p>Class Name: {prediction.class_name}</p>
-          </div>
+        <div className={styles.ContainerResult}>
+          {prediction && (
+            <>
+              {prediction.class_id === "0" && <img src={carro} alt="Carro" />}
+              {prediction.class_id === "1" && <img src={moto} alt="Moto" />}
+              {prediction.class_id === "2" && (
+                <img src={caminhao} alt="Caminhão" />
+              )}
+              <p>A sua imagem é um(a): {prediction.class_name}</p>
+            </>
+          )}
+        </div>
+
+        {prediction ? null : (
+          <footer className={styles.footer}>
+            <p>Faça upload desses tipos de imagens</p>
+            <img src={carro} alt="Carro" />
+            <img src={moto} alt="Moto" />
+            <img src={caminhao} alt="Caminhão" />
+          </footer>
         )}
       </div>
-
-      <footer className={styles.footer}>
-        <p>Faça upload desses tipos de imagens</p>
-        <img src={carro} alt=""></img>
-        <img src={moto} alt=""></img>
-        <img src={caminhao} alt=""></img>
-      </footer>
     </div>
   );
 }

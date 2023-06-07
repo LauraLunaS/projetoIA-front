@@ -102,3 +102,8 @@ button:hover {
   font-size: 12pt;
   margin-top: 30px;
 }
+
+.ContainerResult {
+  text-align: center;
+  margin-top: 30px;
+}
